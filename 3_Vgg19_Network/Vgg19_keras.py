@@ -20,7 +20,7 @@ from keras import optimizers
 from keras.callbacks import LearningRateScheduler, TensorBoard
 from keras.layers.normalization import BatchNormalization
 # from keras.utils.data_utils import get_file
-from skluc.mldatasets import Cifar10Dataset as dataset
+import skluc.mldatasets as dataset
 
 num_classes  = 10
 batch_size   = 128
@@ -54,7 +54,7 @@ data.normalize()
 data.data_astype(np.float32)
 data.labels_astype(np.float32)
 data.to_one_hot()
-data.flatten()
+data.to_image()
 
 (x_train, y_train), (x_test, y_test) = data.train, data.test
 
