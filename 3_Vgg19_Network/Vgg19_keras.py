@@ -173,3 +173,4 @@ model.fit_generator(datagen.flow(x_train, y_train,batch_size=batch_size),
 model.save('{}_vgg19_cifar10'.format(time.time()))
 
 print("Final evaluation on test set: {}".format(model.evaluate(x_test, y_test)))
+# Final evaluation on test set: [0.5909230460166931, 0.9245]
